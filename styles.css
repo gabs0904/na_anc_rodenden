@@ -1,0 +1,203 @@
+/* Reset & base styles */
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff7f0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+/* Top Section */
+.container {
+  text-align: center;
+  max-width: 600px;
+  margin: 2rem auto 4rem;
+  padding: 2rem;
+}
+
+h1 {
+  color: #d38d5f;
+  font-size: 2.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.subtitle {
+  color: #a7745a;
+  margin-bottom: 1.5rem;
+}
+
+/* Fortune Cookie */
+.fortune-cookie {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.fortune-cookie img {
+  width: 180px;
+  max-width: 100%;
+  transition: transform 0.2s ease;
+}
+
+.fortune-cookie:hover {
+  transform: scale(1.05);
+}
+
+.fortune-text {
+  margin-top: 1.5rem;
+  background-color: #fffbe6;
+  border: 2px dashed #f0c38e;
+  border-radius: 12px;
+  padding: 1rem;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+.fortune-text.show {
+  opacity: 1;
+}
+
+#fortuneMessage {
+  font-size: 1.2rem;
+  color: #5e4033;
+  line-height: 1.5;
+}
+
+/* Surprise Row: Spotify + Envelope */
+.surprise-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 4rem auto;
+  max-width: 1000px;
+  padding: 0 1rem;
+}
+
+/* Spotify */
+.playlist {
+  max-width: 400px;
+  width: 100%;
+}
+
+.playlist iframe {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+/* Envelope */
+.envelope-box {
+  position: relative;
+  max-width: 300px;
+  cursor: pointer;
+}
+
+.envelope-img {
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+/* Letter Reveal */
+.letter-reveal {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.8s ease-in-out;
+  margin-top: 1rem;
+}
+
+.letter-reveal.show {
+  opacity: 1;
+  max-height: 1000px;
+}
+.letter-reveal {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 1rem;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transform: translateY(20px);
+  transition: all 0.7s ease-in-out;
+  pointer-events: none;
+  position: relative;
+  gap: 0;
+}
+
+.letter-reveal.show {
+  opacity: 1;
+  max-height: 1000px;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.item {
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.letter-item {
+  width: 320px;
+  margin-right: -80px;  /* negative margin to overlap */
+}
+
+.photo-item {
+  width: 280px;
+  margin-left: -80px;   /* negative margin to overlap */
+}
+
+.letter {
+  background: #fffdf7;
+  border: 2px solid #f0c38e;
+  border-radius: 12px;
+  padding: 1rem;
+  font-family: 'Georgia', serif;
+  color: #5e4033;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.letter-photo {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: block;
+}
+
+/* Spotlight styles */
+
+.spotlight .item {
+  filter: brightness(0.6);
+  transform: scale(0.95);
+  z-index: 1;
+  box-shadow: none;
+}
+
+.spotlight .item.spotlight-active {
+  filter: brightness(1);
+  transform: scale(1.1);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+  z-index: 10;
+  transition-delay: 0s;
+}
+
+.letter-item,
+.photo-item {
+  width: 300px;        
+  margin-right: -80px;  
+  margin-left: -80px;   
+}
+
+.letter-item {
+  margin-left: 0;       
+}
+
+.photo-item {
+  margin-right: 0;      
+}

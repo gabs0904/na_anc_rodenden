@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Birthday Fortune</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Birthday Message Section -->
+  <div class="container">
+    <h1>🎉 Happy Birthday, Anc! 🎉</h1>
+    <p class="subtitle">Click the cookie for a surprise 🍪</p>
+
+    <div class="fortune-cookie" onclick="revealFortune()">
+      <img src="cookie-closed.png" id="cookieImage" alt="Fortune Cookie" />
+    </div>
+
+    <div class="fortune-text" id="fortuneText">
+      <p id="fortuneMessage"></p>
+    </div>
+  </div>
+
+  <!-- Surprise Section -->
+  <div class="surprise-row">
+    <!-- Left: Spotify Playlist -->
+    <div class="playlist">
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/10cFleF4ADZEN4jnRJCl5V?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+
+    <!-- Right: Envelope -->
+    <div class="envelope-box" onclick="openLetter()">
+      <img src="envelope-closed.png" id="envelopeImage" alt="Closed Envelope" class="envelope-img" />
+
+     <div class="letter-reveal" id="letterReveal">
+  <div class="item letter-item" onclick="spotlight('letter')">
+    <div class="letter">
+      <p>Helou Anc,</p>
+      <p>Go pravam ovoa u 5 za 12 (pa i debagiram samo za tebe) i zatoa eve cringe quote. 
+        You make every day brighter just by being in it. I’m so grateful for you. 💖</p>
+      <p>Mwah,</p>
+      <p><em>Gabi</em></p>
+    </div>
+  </div>
+  <div class="item photo-item" onclick="spotlight('photo')">
+    <img src="us-together.jpeg" alt="Us together" class="letter-photo" />
+  </div>
+</div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
